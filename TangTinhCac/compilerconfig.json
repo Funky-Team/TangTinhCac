@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "Content/template/_variables.css",
+    "inputFile": "Content/template/_variables.scss"
+  },
+  {
+    "outputFile": "Content/template/breadcrumb.css",
+    "inputFile": "Content/template/breadcrumb.scss"
+  },
+  {
+    "outputFile": "Content/template/_predefine.css",
+    "inputFile": "Content/template/_predefine.scss"
+  }
+]

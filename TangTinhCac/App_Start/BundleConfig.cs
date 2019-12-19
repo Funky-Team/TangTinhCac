@@ -20,11 +20,17 @@ namespace TangTinhCac
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
+                      //"~/Scripts/bootstrap.js",
+                      "~/Scripts/template/bootstrap.min.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      //"~/Content/bootstrap.css",
+                      "~/Content/template/bootstrap.min.css",
+                      "~/Content/template/font-awesome.min.css",
+                      //"~/Content/template/_variables.css",
+                      //"~/Content/template/_predefine.css",
+                      //"~/Content/template/breadcrumb.css",
                       "~/Content/site.css"));
         }
     }
