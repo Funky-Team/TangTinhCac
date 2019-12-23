@@ -10,5 +10,25 @@
   {
     "outputFile": "Content/template/_predefine.css",
     "inputFile": "Content/template/_predefine.scss"
+  },
+  {
+    "outputFile": "Content/template/floating-button.css",
+    "inputFile": "Content/template/floating-button.less"
+  },
+  {
+    "outputFile": "Content/template/_gallery.css",
+    "inputFile": "Content/template/_gallery.scss"
+  },
+  {
+    "outputFile": "Content/template/video-gallery.css",
+    "inputFile": "Content/template/video-gallery.less"
+  },
+  {
+    "outputFile": "Content/template/video-gallery.css",
+    "inputFile": "Content/template/video-gallery.scss"
+  },
+  {
+    "outputFile": "Content/template/horizontal-filter.css",
+    "inputFile": "Content/template/horizontal-filter.scss"
   }
 ]

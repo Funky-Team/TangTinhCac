@@ -1,0 +1,28 @@
+﻿@import "_variables.scss";
+
+.isotope_fillter{
+	margin-bottom: 50px;
+	.gallery_filter{
+		text-align: center;
+		li{
+			display: inline-block;
+			margin-right: 45px;
+			&:last-child{
+				margin-right: 0px;
+			}
+			a{
+				font-size: 12px;
+				font-family: $rob;
+				font-weight: 500;
+				color: $dip;
+				@include transition;
+				text-transform: uppercase;
+			}
+			&:hover, &.active{
+				a{
+					color: $baseColor;
+				}
+			}
+		}
+	}
+}
