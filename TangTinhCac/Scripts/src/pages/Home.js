@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    Link,
+    NavLink
+} from 'react-router-dom';
+
 import IdolPersonalInfo from '../components/IdolPersonalInfo';
 import IdolLifeStory from '../components/IdolLifeStory';
 import IdolImages from '../components/IdolImages';
+import IdolVideos from '../components/IdolVideos';
+import IdolForum from '../components/IdolForum';
+import IdolVoting from '../components/IdolVoting';
 import FloatingButton from '../components/common/FloatingButton';
 import Footer from '../components/common/Footer';
-import IdolVideos from '../components/IdolVideos';
 
 export default class Home extends Component {
   render() {
     return  (
+        <Router>
       <div id="colorlib-page">
     <a href="#" className="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
     <aside id="colorlib-aside" role="complementary" className="js-fullheight text-center">
@@ -30,14 +41,32 @@ export default class Home extends Component {
             </div>
         </div>
         <nav id="colorlib-main-menu" role="navigation">
-            <ul>
-                <li className="colorlib-active"><a href="">Giới thiệu</a></li>
-                <li><a href="">Tiếu sử</a></li>
-                <li><a href="">Hình ảnh</a></li>
-                <li><a href="">Video</a></li>
-                <li><a href="">Diễn đàn</a></li>
-                <li><a href="">Voting</a></li>
-            </ul>
+                <ul>
+                    <li className="colorlib-active">
+                        <NavLink activeClassName="colorlib-active" exact to="/gioithieu">Giới thiệu</NavLink>
+                    </li>
+                    <li>
+                        <NavLink activeClassName="colorlib-active" exact to="/tieusu">Tiếu sử</NavLink>
+                    </li>
+                    <li>
+                        <NavLink activeClassName="colorlib-active" exact to="/hinhanh">Hình ảnh</NavLink>
+                    </li>
+                    <li>
+                        <NavLink activeClassName="colorlib-active" exact to="/video">Video</NavLink>
+                    </li>
+                    <li>
+                        <NavLink activeClassName="colorlib-active" exact to="/diendan">Diễn đàn</NavLink>
+                    </li>
+                    <li>
+                        <NavLink activeClassName="colorlib-active" exact to="/voting">Voting</NavLink>
+                    </li>
+                    {/* <li className="colorlib-active"><a href="">Giới thiệu</a></li>
+                    <li><a href="">Tiếu sử</a></li>
+                    <li><a href="">Hình ảnh</a></li>
+                    <li><a href="">Video</a></li>
+                    <li><a href="">Diễn đàn</a></li>
+                    <li><a href="">Voting</a></li> */}
+                </ul>
         </nav>
 
         <div className="colorlib-footer">
@@ -57,11 +86,32 @@ export default class Home extends Component {
           {/* <IdolPersonalInfo/> */}
           {/* <IdolLifeStory/> */}
           {/* <IdolImages/> */}
-          <IdolVideos/>
+          {/* <IdolVideos/> */}
+        <Switch>
+            <Route exact path="/gioithieu">
+                <IdolPersonalInfo />
+            </Route>
+            <Route path="/tieusu">
+                <IdolLifeStory />
+            </Route>
+            <Route path="/hinhanh">
+                <IdolImages />
+            </Route>
+            <Route path="/video">
+                <IdolVideos />
+            </Route>
+            <Route path="/diendan">
+                <IdolForum />
+            </Route>
+            <Route path="/voting">
+                <IdolVoting />
+            </Route>
+        </Switch>
           <FloatingButton/>
           <Footer/>
         </div>               
 </div>
+</Router>
 );
   }
 }
