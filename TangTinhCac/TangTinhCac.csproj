@@ -212,6 +212,21 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EntityModels\Idol\Body.cs" />
+    <Compile Include="Models\EntityModels\Idol\BoobStatus.cs" />
+    <Compile Include="Models\EntityModels\Idol\Bra.cs" />
+    <Compile Include="Models\EntityModels\Idol\Idol.cs" />
+    <Compile Include="Models\EntityModels\Idol\IdolForumPost.cs" />
+    <Compile Include="Models\EntityModels\Idol\IdolForumPostComment.cs" />
+    <Compile Include="Models\EntityModels\Idol\IdolForumPostCommentReaction.cs" />
+    <Compile Include="Models\EntityModels\Idol\IdolForumPostCommentReply.cs" />
+    <Compile Include="Models\EntityModels\Idol\IdolForumPostCommentReplyReaction.cs" />
+    <Compile Include="Models\EntityModels\Idol\IdolForumPostImage.cs" />
+    <Compile Include="Models\EntityModels\Idol\IdolForumPostReaction.cs" />
+    <Compile Include="Models\EntityModels\Idol\IdolImage.cs" />
+    <Compile Include="Models\EntityModels\Idol\IdolStory.cs" />
+    <Compile Include="Models\EntityModels\Idol\IdolVideo.cs" />
+    <Compile Include="Models\EntityModels\Idol\ReactionType.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -448,6 +463,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\ViewModels\Idol\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
