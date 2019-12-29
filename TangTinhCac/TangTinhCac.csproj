@@ -223,6 +223,7 @@
     <Compile Include="Models\EntityModels\Idol\IdolForumPostCommentReplyReaction.cs" />
     <Compile Include="Models\EntityModels\Idol\IdolForumPostImage.cs" />
     <Compile Include="Models\EntityModels\Idol\IdolForumPostReaction.cs" />
+    <Compile Include="Models\EntityModels\Idol\IdolForumPostType.cs" />
     <Compile Include="Models\EntityModels\Idol\IdolImage.cs" />
     <Compile Include="Models\EntityModels\Idol\IdolStory.cs" />
     <Compile Include="Models\EntityModels\Idol\IdolVideo.cs" />

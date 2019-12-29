@@ -1,8 +1,10 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using TangTinhCac.Models.EntityModels.Idol;
 
 namespace TangTinhCac.Models
 {
@@ -16,6 +18,12 @@ namespace TangTinhCac.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public virtual ICollection<IdolForumPostReaction> IdolForumPostReactions { get; set; }
+        public virtual ICollection<IdolForumPostComment> IdolForumPostComments { get; set; }
+        public virtual ICollection<IdolForumPostCommentReaction> IdolForumPostCommentReactions { get; set; }
+        public virtual ICollection<IdolForumPostCommentReply> IdolForumPostCommentReplys { get; set; }
+        public virtual ICollection<IdolForumPostCommentReplyReaction> IdolForumPostCommentReplyReactions { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

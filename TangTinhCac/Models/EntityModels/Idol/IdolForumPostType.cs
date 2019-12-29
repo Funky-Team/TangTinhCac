@@ -1,22 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TangTinhCac.Models.EntityModels.Idol
 {
-    public class IdolImage
+    public class IdolForumPostType
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ImageID { get; set; }
+        public int PostTypeID { get; set; }
         [Required]
-        public string ImageLink { get; set; }
-        [Required]
-        [ForeignKey("Idol")]
-        public Guid IdolID { get; set; }
+        public string PostTypeDesc { get; set; }
         [Required]
         public Guid CreatedByID { get; set; }
         [Required]
@@ -26,6 +23,6 @@ namespace TangTinhCac.Models.EntityModels.Idol
         [Required]
         public DateTime LastModifiedDateTime { get; set; }
 
-        public virtual Idol Idol { get; set; } 
+        public virtual ICollection<IdolForumPost> IdolForumPosts { get; set; }
     }
 }
