@@ -8,6 +8,7 @@ using System.Web;
 
 namespace TangTinhCac.Models.EntityModels.Idol
 {
+    [Table("IdolForumPostCommentReply")]
     public class IdolForumPostCommentReply
     {
         [Key]
@@ -15,8 +16,8 @@ namespace TangTinhCac.Models.EntityModels.Idol
         public int ReplyID { get; set; }
         [Required]
         public string ReplyContent { get; set; }
-        [Required]
-        public Guid UserID { get; set; }
+        //[Required]
+        //public string UserId { get; set; }
         [Required]
         [ForeignKey("IdolForumPostComment")]
         public int CommentID { get; set; }
@@ -29,10 +30,10 @@ namespace TangTinhCac.Models.EntityModels.Idol
         [Required]
         public DateTime LastModifiedDateTime { get; set; }
 
-        [ForeignKey("UserID")]
-        public virtual ApplicationUser User { get; set; }
+        //[ForeignKey("UserId")]
+        //public virtual ApplicationUser User { get; set; }
         public virtual IdolForumPostComment IdolForumPostComment { get; set; }
-        public virtual IdolForumPostCommentReplyReaction GetIdolForumPostCommentReplyReaction { get; set; }
+        public virtual ICollection<IdolForumPostCommentReplyReaction> IdolForumPostCommentReplyReactions { get; set; }
 
     } 
 }

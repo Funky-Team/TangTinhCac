@@ -7,6 +7,7 @@ using System.Web;
 
 namespace TangTinhCac.Models.EntityModels.Idol
 {
+    [Table("IdolForumPostImage")]
     public class IdolForumPostImage
     {
         [Key]

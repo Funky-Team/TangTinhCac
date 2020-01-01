@@ -7,6 +7,7 @@ using System.Web;
 
 namespace TangTinhCac.Models.EntityModels.Idol
 {
+    [Table("IdolStory")]
     public class IdolStory
     {
         [Key]

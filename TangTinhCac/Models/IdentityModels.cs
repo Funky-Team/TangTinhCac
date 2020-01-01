@@ -19,19 +19,40 @@ namespace TangTinhCac.Models
             return userIdentity;
         }
 
-        public virtual ICollection<IdolForumPostReaction> IdolForumPostReactions { get; set; }
-        public virtual ICollection<IdolForumPostComment> IdolForumPostComments { get; set; }
-        public virtual ICollection<IdolForumPostCommentReaction> IdolForumPostCommentReactions { get; set; }
-        public virtual ICollection<IdolForumPostCommentReply> IdolForumPostCommentReplys { get; set; }
-        public virtual ICollection<IdolForumPostCommentReplyReaction> IdolForumPostCommentReplyReactions { get; set; }
+        //public virtual ICollection<IdolForumPostReaction> IdolForumPostReactions { get; set; }
+        //public virtual ICollection<IdolForumPostComment> IdolForumPostComments { get; set; }
+        //public virtual ICollection<IdolForumPostCommentReaction> IdolForumPostCommentReactions { get; set; }
+        //public virtual ICollection<IdolForumPostCommentReply> IdolForumPostCommentReplys { get; set; }
+        //public virtual ICollection<IdolForumPostCommentReplyReaction> IdolForumPostCommentReplyReactions { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public virtual DbSet<Body> Bodies { get; set; }
+        public virtual DbSet<BoobStatus> BoobStatuses { get; set; }
+        public virtual DbSet<Bra> Bras { get; set; }
+        public virtual DbSet<Idol> Idols { get; set; }
+        public virtual DbSet<IdolForumPost> IdolForumPosts { get; set; }
+        public virtual DbSet<IdolForumPostComment> IdolForumPostComments { get; set; }
+        public virtual DbSet<IdolForumPostCommentReaction> IdolForumPostCommentReactions { get; set; }
+        public virtual DbSet<IdolForumPostCommentReply> IdolForumPostCommentReplies { get; set; }
+        public virtual DbSet<IdolForumPostCommentReplyReaction> IdolForumPostCommentReplyReactions { get; set; }
+        public virtual DbSet<IdolForumPostImage> IdolForumPostImages { get; set; }
+        public virtual DbSet<IdolForumPostReaction> IdolForumPostReactions { get; set; }
+        public virtual DbSet<IdolForumPostType> IdolForumPostTypes { get; set; }
+        public virtual DbSet<IdolImage> IdolImages { get; set; }
+        public virtual DbSet<IdolStory> IdolStories { get; set; }
+        public virtual DbSet<IdolVideo> IdolVideos { get; set; }
+        public virtual DbSet<ReactionType> ReactionTypes { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //}
 
         public static ApplicationDbContext Create()
         {

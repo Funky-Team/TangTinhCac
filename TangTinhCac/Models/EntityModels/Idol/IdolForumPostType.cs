@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TangTinhCac.Models.EntityModels.Idol
 {
+    [Table("IdolForumPostType")]
     public class IdolForumPostType
     {
         [Key]
