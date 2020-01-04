@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './pages/Home'
+import IdolHome from './pages/IdolHome'
 
-const App = () => <Home/>;
+const App = () => <IdolHome/>;
 
 ReactDOM.render(<App />, document.getElementById("root"));

@@ -17,7 +17,7 @@ namespace TangTinhCac.Models.EntityModels.Idols
         public string IdolName { get; set; }
         [StringLength(50)]
         public string IdolOtherName { get; set; }
-        public DateTime IdolBirthday { get; set; }
+        public DateTime? IdolBirthday { get; set; }
         [StringLength(3)]
         public string IdolCountryCD { get; set; }
         [Range(0, 3)]

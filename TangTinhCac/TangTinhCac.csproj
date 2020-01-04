@@ -239,6 +239,10 @@
     <Compile Include="Migrations\202001040350507_TKC_v5.Designer.cs">
       <DependentUpon>202001040350507_TKC_v5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001041201374_TKC_v6.cs" />
+    <Compile Include="Migrations\202001041201374_TKC_v6.Designer.cs">
+      <DependentUpon>202001041201374_TKC_v6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\EntityModels\Idols\Body.cs" />
@@ -417,9 +421,9 @@
     <Content Include="Content\template\_gallery.scss" />
     <Content Include="Content\template\video-gallery.scss" />
     <Content Include="Content\template\horizontal-filter.scss" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\config\webpack.config.js" />
-    <Content Include="Scripts\dist\index.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -428,6 +432,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\src\components\common\FloatingButton.js" />
@@ -439,7 +447,7 @@
     <Content Include="Scripts\src\components\IdolVideos.js" />
     <Content Include="Scripts\src\components\IdolVoting.js" />
     <Content Include="Scripts\src\index.js" />
-    <Content Include="Scripts\src\pages\Home.js" />
+    <Content Include="Scripts\src\pages\IdolHome.js" />
     <Content Include="Scripts\template\accordion.js" />
     <Content Include="Scripts\template\aos.js" />
     <Content Include="Scripts\template\bootstrap-datepicker.js" />
@@ -522,6 +530,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001040350507_TKC_v5.resx">
       <DependentUpon>202001040350507_TKC_v5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001041201374_TKC_v6.resx">
+      <DependentUpon>202001041201374_TKC_v6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

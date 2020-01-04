@@ -44,10 +44,9 @@ export default class Footer extends Component {
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-
                         <p>
                             Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i className="icon-heart" aria-hidden="true"></i> by @*<a href="https://colorlib.com" target="_blank"></a>*@ <strong>Funky Team</strong>
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i className="icon-heart" aria-hidden="true"></i> by <strong>Funky Team</strong>
                         </p>
                     </div>
                 </div>

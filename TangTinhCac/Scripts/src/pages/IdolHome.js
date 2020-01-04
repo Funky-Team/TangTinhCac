@@ -16,7 +16,7 @@ import IdolVoting from '../components/IdolVoting';
 import FloatingButton from '../components/common/FloatingButton';
 import Footer from '../components/common/Footer';
 
-export default class Home extends Component {
+export default class IdolHome extends Component {
   render() {
     return  (
         <Router>
@@ -72,7 +72,7 @@ export default class Home extends Component {
         <div className="colorlib-footer">
             <p>
                 Copyright &copy;
-                <script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i className="icon-heart" aria-hidden="true"></i> by @*<a href="https://colorlib.com" target="_blank"></a>*@ <strong>Funky Team</strong>
+                <script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i className="icon-heart" aria-hidden="true"></i> by <strong>Funky Team</strong>
                 <ul>
                     <li><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i className="icon-facebook"></i></a></li>
                     <li><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i className="icon-twitter"></i></a></li>
