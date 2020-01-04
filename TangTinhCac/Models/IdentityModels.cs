@@ -4,7 +4,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using TangTinhCac.Models.EntityModels.Idol;
+using TangTinhCac.Models.EntityModels.Idols;
 
 namespace TangTinhCac.Models
 {

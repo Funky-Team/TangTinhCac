@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TangTinhCac.Models.EntityModels.Idol
+namespace TangTinhCac.Models.EntityModels.Idols
 {
     [Table("IdolForumPostType")]
     public class IdolForumPostType
@@ -15,14 +15,12 @@ namespace TangTinhCac.Models.EntityModels.Idol
         public int PostTypeID { get; set; }
         [Required]
         public string PostTypeDesc { get; set; }
-        [Required]
-        public Guid CreatedByID { get; set; }
-        [Required]
-        public DateTime CreatedDateTime { get; set; }
-        [Required]
-        public Guid LastModifiedByID { get; set; }
-        [Required]
-        public DateTime LastModifiedDateTime { get; set; }
+        [MaxLength(128)]
+        public string CreatedByID { get; set; }
+        public DateTime? CreatedDateTime { get; set; }
+        [MaxLength(128)]
+        public string LastModifiedByID { get; set; }
+        public DateTime? LastModifiedDateTime { get; set; }
 
         public virtual ICollection<IdolForumPost> IdolForumPosts { get; set; }
     }

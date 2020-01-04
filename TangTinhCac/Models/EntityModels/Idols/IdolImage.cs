@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace TangTinhCac.Models.EntityModels.Idol
+namespace TangTinhCac.Models.EntityModels.Idols
 {
     [Table("IdolImage")]
     public class IdolImage
@@ -18,14 +18,12 @@ namespace TangTinhCac.Models.EntityModels.Idol
         [Required]
         [ForeignKey("Idol")]
         public Guid IdolID { get; set; }
-        [Required]
-        public Guid CreatedByID { get; set; }
-        [Required]
-        public DateTime CreatedDateTime { get; set; }
-        [Required]
-        public Guid LastModifiedByID { get; set; }
-        [Required]
-        public DateTime LastModifiedDateTime { get; set; }
+        [MaxLength(128)]
+        public string CreatedByID { get; set; }
+        public DateTime? CreatedDateTime { get; set; }
+        [MaxLength(128)]
+        public string LastModifiedByID { get; set; }
+        public DateTime? LastModifiedDateTime { get; set; }
 
         public virtual Idol Idol { get; set; } 
     }

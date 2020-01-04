@@ -6,34 +6,32 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace TangTinhCac.Models.EntityModels.Idol
+namespace TangTinhCac.Models.EntityModels.Idols
 {
-    [Table("IdolForumPostCommentReply")]
-    public class IdolForumPostCommentReply
+    [Table("IdolForumPostCommentReaction")]
+    public class IdolForumPostCommentReaction
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ReplyID { get; set; }
+        public int ReactionID { get; set; }
         [Required]
-        public string ReplyContent { get; set; }
+        [ForeignKey("ReactionType")]
+        public int ReactionTypeID { get; set; }
         //[Required]
         //public string UserId { get; set; }
         [Required]
         [ForeignKey("IdolForumPostComment")]
         public int CommentID { get; set; }
-        [Required]
-        public Guid CreatedByID { get; set; }
-        [Required]
-        public DateTime CreatedDateTime { get; set; }
-        [Required]
-        public Guid LastModifiedByID { get; set; }
-        [Required]
-        public DateTime LastModifiedDateTime { get; set; }
+        [MaxLength(128)]
+        public string CreatedByID { get; set; }
+        public DateTime? CreatedDateTime { get; set; }
+        [MaxLength(128)]
+        public string LastModifiedByID { get; set; }
+        public DateTime? LastModifiedDateTime { get; set; }
 
+        public virtual ReactionType ReactionType { get; set; }
         //[ForeignKey("UserId")]
         //public virtual ApplicationUser User { get; set; }
         public virtual IdolForumPostComment IdolForumPostComment { get; set; }
-        public virtual ICollection<IdolForumPostCommentReplyReaction> IdolForumPostCommentReplyReactions { get; set; }
-
-    } 
+    }
 }

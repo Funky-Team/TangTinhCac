@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace TangTinhCac.Models.EntityModels.Idol
+namespace TangTinhCac.Models.EntityModels.Idols
 {
     [Table("Idol")]
     public class Idol
@@ -20,7 +20,7 @@ namespace TangTinhCac.Models.EntityModels.Idol
         public DateTime IdolBirthday { get; set; }
         [StringLength(3)]
         public string IdolCountryCD { get; set; }
-        [Range(0,3)]
+        [Range(0, 3)]
         public int? IdolHeight { get; set; }//cm
         [Range(0, 3)]
         public int? IdolWeight { get; set; }//kg
@@ -32,18 +32,16 @@ namespace TangTinhCac.Models.EntityModels.Idol
         public int? BraSizeID { get; set; }
         [ForeignKey("BoobStatus")]
         public int? BoobStatusID { get; set; }
-        [Required]
-        public Guid CreatedByID { get; set; }
-        [Required]
-        public DateTime CreatedDateTime { get; set; }
-        [Required]
-        public Guid LastModifiedByID { get; set; }
-        [Required]
-        public DateTime LastModifiedDateTime { get; set; }
+        [MaxLength(128)]
+        public string CreatedByID { get; set; }
+        public DateTime? CreatedDateTime { get; set; }
+        [MaxLength(128)]
+        public string LastModifiedByID { get; set; }
+        public DateTime? LastModifiedDateTime { get; set; }
 
-        
+
         public virtual Body Body { get; set; }
-        public virtual Bra Bra { get; set; } 
+        public virtual Bra Bra { get; set; }
         public virtual BoobStatus BoobStatus { get; set; }
         public virtual ICollection<IdolImage> IdolImages { get; set; }
         public virtual ICollection<IdolStory> IdolStories { get; set; }

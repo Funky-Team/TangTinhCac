@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace TangTinhCac.Models.EntityModels.Idol
+namespace TangTinhCac.Models.EntityModels.Idols
 {
     [Table("Bra")]
     public class Bra
@@ -16,14 +16,12 @@ namespace TangTinhCac.Models.EntityModels.Idol
         [Required]
         [StringLength(10)]
         public string BraDesc { get; set; }
-        [Required]
-        public Guid CreatedByID { get; set; }
-        [Required]
-        public DateTime CreatedDateTime { get; set; }
-        [Required]
-        public Guid LastModifiedByID { get; set; }
-        [Required]
-        public DateTime LastModifiedDateTime { get; set; }
+        [MaxLength(128)]
+        public string CreatedByID { get; set; }
+        public DateTime? CreatedDateTime { get; set; }
+        [MaxLength(128)]
+        public string LastModifiedByID { get; set; }
+        public DateTime? LastModifiedDateTime { get; set; }
 
         public virtual ICollection<Idol> Idols { get; set; }
     }
