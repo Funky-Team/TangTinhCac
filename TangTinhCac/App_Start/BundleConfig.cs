@@ -26,7 +26,8 @@ namespace TangTinhCac
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/extension").Include(
-                      "~/Scripts/moment.min.js"));
+                      "~/Scripts/moment.min.js",
+                      "~/Scripts/jquery.blockUI.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       //"~/Content/bootstrap.css",

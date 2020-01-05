@@ -37,6 +37,15 @@ namespace TangTinhCac.App_Start
             builder.RegisterType<IdolService>()
                       .As<IIdolService>()
                       .InstancePerRequest();
+            builder.RegisterType<BodyService>()
+                     .As<IBodyService>()
+                     .InstancePerRequest();
+            builder.RegisterType<BoobStatusService>()
+                     .As<IBoobStatusService>()
+                     .InstancePerRequest();
+            builder.RegisterType<BraService>()
+                     .As<IBraService>()
+                     .InstancePerRequest();
             //Set the dependency resolver to be Autofac.  
             Container = builder.Build();
 
