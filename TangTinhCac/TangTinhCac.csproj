@@ -306,6 +306,9 @@
       <DependentUpon>breadcrumb.css</DependentUpon>
     </Content>
     <Content Include="Content\template\flaticon.css" />
+    <Content Include="Content\template\flaticon.min.css">
+      <DependentUpon>flaticon.css</DependentUpon>
+    </Content>
     <Content Include="Content\template\floating-button.css">
       <DependentUpon>floating-button.less</DependentUpon>
     </Content>
