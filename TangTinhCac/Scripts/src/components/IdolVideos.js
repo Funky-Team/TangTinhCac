@@ -1,6 +1,6 @@
 ﻿import React, { Component } from 'react';
 
-export default  class IdolVideos extends Component {
+export default class IdolVideos extends Component {
     render() {
         return (
             <div id="idol_videos" className="hero-wrap js-fullheight" data-stellar-background-ratio="0.5">
@@ -9,8 +9,8 @@ export default  class IdolVideos extends Component {
                         <div className="film-container">
                             <div className="row d-flex justify-content-center">
                                 <div className="single-film wow fadeInDown col-md-4" data-wow-delay=".1s">
-                                    <div className="box" style= 
-                                                {{background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)"}}>
+                                    <div className="box" style=
+                                        {{ background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)" }}>
                                         <div className="box__right box-pay-icon">
                                             <a href="javascript:;">
                                                 <i className="play-movie-icon glyphicon glyphicon-play-circle"></i>
@@ -44,8 +44,8 @@ export default  class IdolVideos extends Component {
                                     </div>
                                 </div>
                                 <div className="single-film wow fadeInDown col-md-4" data-wow-delay=".2s">
-                                    <div className="box" style= 
-                                                    {{background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)"}}>
+                                    <div className="box" style=
+                                        {{ background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)" }}>
                                         <div className="box__right box-pay-icon">
                                             <a href="javascript:;">
                                                 <i className="play-movie-icon glyphicon glyphicon-play-circle"></i>
@@ -80,7 +80,7 @@ export default  class IdolVideos extends Component {
                                 </div>
                                 <div className="single-film wow fadeInDown col-md-4" data-wow-delay=".3s">
                                     <div className="box" style=
-                                                        {{background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)"}}>
+                                        {{ background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)" }}>
                                         <div className="box__right box-pay-icon">
                                             <a href="javascript:;">
                                                 <i className="play-movie-icon glyphicon glyphicon-play-circle"></i>
@@ -115,7 +115,7 @@ export default  class IdolVideos extends Component {
                                 </div>
                                 <div className="single-film wow fadeInDown col-md-4" data-wow-delay=".4s">
                                     <div className="box" style=
-                                                {{background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)"}}>
+                                        {{ background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)" }}>
                                         <div className="box__right box-pay-icon">
                                             <a href="javascript:;">
                                                 <i className="play-movie-icon glyphicon glyphicon-play-circle"></i>
@@ -150,7 +150,7 @@ export default  class IdolVideos extends Component {
                                 </div>
                                 <div className="single-film wow fadeInDown col-md-4" data-wow-delay=".5s">
                                     <div className="box" style=
-                                                    {{background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)"}}>
+                                        {{ background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)" }}>
                                         <div className="box__right box-pay-icon">
                                             <a href="javascript:;">
                                                 <i className="play-movie-icon glyphicon glyphicon-play-circle"></i>
@@ -185,7 +185,7 @@ export default  class IdolVideos extends Component {
                                 </div>
                                 <div className="single-film wow fadeInDown col-md-4" data-wow-delay=".6s">
                                     <div className="box" style=
-                                                    {{background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)"}}>
+                                        {{ background: "url(https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png)" }}>
                                         <div className="box__right box-pay-icon">
                                             <a href="javascript:;">
                                                 <i className="play-movie-icon glyphicon glyphicon-play-circle"></i>
