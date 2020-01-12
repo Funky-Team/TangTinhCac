@@ -9,22 +9,25 @@ using TangTinhCac.Services.DBFactory;
 
 namespace TangTinhCac.Services.Idols
 {
-    public class BraService : IBraService
+    public class IdolImageService : IIdolImageService
     {
         private readonly ApplicationDbContext _db;
-        public BraService(IDBFactory dBFactoryService)
+
+        public IdolImageService(IDBFactory dbFactoryService)
         {
-            _db = dBFactoryService.Init();
+            _db = dbFactoryService.Init();
         }
-        public bool CreateNewBra(BraViewModel model, string userId)
+
+        public bool CreateNewIdolImage(IdolImageViewModel model, string userId)
         {
             try
             {
-                _db.Bras.Add(new Bra
+                _db.IdolImages.Add(new IdolImage
                 {
-                    BraDesc = model.BraDesc,
+                    ImageLink = model.ImageLink,
+                    IdolID = model.IdolID,
                     CreatedByID = userId,
-                    CreatedDateTime = DateTime.Now
+                    CreatedDateTime = DateTime.Now,
                 });
                 _db.SaveChanges();
                 return true;
@@ -36,26 +39,25 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public bool DeleteBra(int BraID)
+        public bool DeleteIdolImage(int imageID)
         {
             try
             {
-                _db.Bras.Remove(GetBraByBraID(BraID));
+                _db.IdolImages.Remove(GetIdolImageByImageID(imageID));
                 _db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
 
-        public IEnumerable<Bra> GetAllBra()
+        public IEnumerable<IdolImage> GetAllIdolImages()
         {
             try
             {
-                return _db.Bras.ToList();
+                return _db.IdolImages.ToList();
             }
             catch (Exception ex)
             {
@@ -64,11 +66,11 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public Bra GetBraByBraID(int BraID)
+        public IdolImage GetIdolImageByImageID(int imageID)
         {
             try
             {
-                return _db.Bras.Find(BraID) ?? new Bra();
+                return _db.IdolImages.Find(imageID) ?? new IdolImage();
             }
             catch (Exception ex)
             {
@@ -77,14 +79,15 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public bool UpdateBra(BraViewModel model, string userId)
+        public bool UpdateIdolImage(IdolImageViewModel model, string userId)
         {
             try
             {
-                var bra = GetBraByBraID(model.BraID);
-                bra.BraDesc = model.BraDesc;
-                bra.LastModifiedByID = userId;
-                bra.LastModifiedDateTime = DateTime.Now;
+                var idolImage = GetIdolImageByImageID(model.ImageID);
+                idolImage.ImageLink = model.ImageLink;
+                idolImage.IdolID = model.IdolID;
+                idolImage.LastModifiedDateTime = DateTime.Now;
+                idolImage.LastModifiedByID = userId;
                 _db.SaveChanges();
                 return true;
             }

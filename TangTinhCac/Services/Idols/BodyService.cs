@@ -53,12 +53,28 @@ namespace TangTinhCac.Services.Idols
 
         public IEnumerable<Body> GetAllBody()
         {
-            return _db.Bodies.ToList();
+            try
+            {
+                return _db.Bodies.ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public Body GetBodyByBodyID(int BodyID)
         {
-           return  _db.Bodies.Find(BodyID);
+            try
+            {
+                return _db.Bodies.Find(BodyID) ?? new Body();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public bool UpdateBody(BodyViewModel model,string userId)

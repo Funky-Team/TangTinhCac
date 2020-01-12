@@ -9,22 +9,24 @@ using TangTinhCac.Services.DBFactory;
 
 namespace TangTinhCac.Services.Idols
 {
-    public class BraService : IBraService
+    public class IdolForumPostService : IIdolForumPostService
     {
         private readonly ApplicationDbContext _db;
-        public BraService(IDBFactory dBFactoryService)
+        public IdolForumPostService(IDBFactory dBFactoryService)
         {
             _db = dBFactoryService.Init();
         }
-        public bool CreateNewBra(BraViewModel model, string userId)
+        public bool CreateNewIdolForumPost(IdolForumPostViewModel model, string userId)
         {
             try
             {
-                _db.Bras.Add(new Bra
+                _db.IdolForumPosts.Add(new IdolForumPost
                 {
-                    BraDesc = model.BraDesc,
+                    PostContent = model.PostContent,
+                    PostTypeID = model.PostTypeID,
+                    IdolID = model.IdolID,
                     CreatedByID = userId,
-                    CreatedDateTime = DateTime.Now
+                    CreatedDateTime = DateTime.Now,
                 });
                 _db.SaveChanges();
                 return true;
@@ -36,11 +38,11 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public bool DeleteBra(int BraID)
+        public bool DeleteIdolForumPost(int PostID)
         {
             try
             {
-                _db.Bras.Remove(GetBraByBraID(BraID));
+                _db.IdolForumPosts.Remove(GetIdolForumPostByPostID(PostID));
                 _db.SaveChanges();
                 return true;
             }
@@ -51,11 +53,11 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public IEnumerable<Bra> GetAllBra()
+        public IEnumerable<IdolForumPost> GetAllIdolForumPost()
         {
             try
             {
-                return _db.Bras.ToList();
+                return _db.IdolForumPosts.ToList();
             }
             catch (Exception ex)
             {
@@ -64,11 +66,11 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public Bra GetBraByBraID(int BraID)
+        public IdolForumPost GetIdolForumPostByPostID(int PostID)
         {
             try
             {
-                return _db.Bras.Find(BraID) ?? new Bra();
+                return _db.IdolForumPosts.Find(PostID) ?? new IdolForumPost();
             }
             catch (Exception ex)
             {
@@ -77,14 +79,16 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public bool UpdateBra(BraViewModel model, string userId)
+        public bool UpdateIdolForumPost(IdolForumPostViewModel model, string userId)
         {
             try
             {
-                var bra = GetBraByBraID(model.BraID);
-                bra.BraDesc = model.BraDesc;
-                bra.LastModifiedByID = userId;
-                bra.LastModifiedDateTime = DateTime.Now;
+                var post = GetIdolForumPostByPostID(model.PostID);
+                post.PostContent = model.PostContent;
+                post.PostTypeID = model.PostTypeID;
+                post.IdolID = model.IdolID;
+                post.LastModifiedByID = userId;
+                post.LastModifiedDateTime = DateTime.Now;
                 _db.SaveChanges();
                 return true;
             }

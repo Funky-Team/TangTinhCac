@@ -54,12 +54,28 @@ namespace TangTinhCac.Services.Idols
 
         public IEnumerable<BoobStatus> GetAllBoobStatus()
         {
-            return _db.BoobStatuses.ToList();
+            try
+            {
+                return _db.BoobStatuses.ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public BoobStatus GetBoobStatusByID(int BoobStatusID)
         {
-            return _db.BoobStatuses.Find(BoobStatusID);
+            try
+            {
+                return _db.BoobStatuses.Find(BoobStatusID) ?? new BoobStatus();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public bool UpdateBooStatus(BoobStatusViewModel mode, string userId)

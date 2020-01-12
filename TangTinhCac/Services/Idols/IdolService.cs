@@ -64,12 +64,28 @@ namespace TangTinhCac.Services.Idols
 
         public IEnumerable<Idol> GetAllIdols()
         {
-            return _db.Idols.ToList();
+            try
+            {
+                return _db.Idols.ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public Idol GetIdolByIdolID(Guid idolID)
         {
-            return _db.Idols.Find(idolID);
+            try
+            {
+                return _db.Idols.Find(idolID);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public bool UpdateIdol(IdolViewModel model, string userId)
