@@ -334,6 +334,8 @@
     <Content Include="Content\template\open-iconic-bootstrap.min.css" />
     <Content Include="Content\template\owl.carousel.min.css" />
     <Content Include="Content\template\owl.theme.default.min.css" />
+    <Content Include="Content\template\select-box-custom.css" />
+    <Content Include="Content\template\star-rating.css" />
     <Content Include="Content\template\style.css" />
     <Content Include="Content\template\video-gallery.css">
       <DependentUpon>video-gallery.scss</DependentUpon>
@@ -491,6 +493,7 @@
     <Content Include="Scripts\template\popper.min.js" />
     <Content Include="Scripts\template\range.js" />
     <Content Include="Scripts\template\scrollax.min.js" />
+    <Content Include="Scripts\template\select-box-custom.js" />
     <Content Include="Scripts\template\video-gallery.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
