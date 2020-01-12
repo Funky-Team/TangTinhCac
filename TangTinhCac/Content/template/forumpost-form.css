@@ -1,0 +1,529 @@
+﻿
+.ui-block {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #e6ecf5;
+    margin-bottom: 15px;
+}
+
+    .ui-block .form-control:focus {
+        color: #495057;
+        background-color: transparent;
+        border-color: #ffc6ba;
+        outline: 0;
+        box-shadow: none;
+    }
+
+    .ui-block .news-feed-form {
+        overflow: hidden;
+    }
+
+        .ui-block .news-feed-form .nav-tabs {
+            background-color: #fafbfd;
+            border-bottom: none;
+        }
+
+    .ui-block .nav-tabs .nav-item {
+        position: relative;
+    }
+
+    .ui-block .news-feed-form .nav-tabs .nav-link.active {
+        background-color: #fff;
+        fill: #ff5e3a;
+        color: #515365;
+        border-bottom: transparent;
+    }
+
+    .ui-block .news-feed-form .nav-tabs .nav-link {
+        border: none;
+        border-bottom: 1px solid #e6ecf5;
+        border-right: 1px solid #e6ecf5;
+    }
+
+    .ui-block .news-feed-form .nav-link {
+        fill: #888da8;
+        color: #888da8;
+    }
+
+    .ui-block a {
+        transition: all .15s ease;
+    }
+
+    .ui-block .news-feed-form .nav-link .olymp-status-icon {
+        width: 20px;
+    }
+
+    .ui-block .news-feed-form .nav-link i {
+        margin-right: 10px;
+        width: 18px;
+    }
+
+    .ui-block .inline-items > * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+[class^="olymp-"], [class*=" -icon"] {
+    height: 26px;
+    width: 26px;
+    display: inline-block;
+}
+
+.ui-block a > i {
+    transition: all .15s ease;
+}
+
+.ui-block i {
+    transition: all .3s ease;
+    vertical-align: unset;
+}
+
+.ui-block .news-feed-form .nav-tabs .nav-link.active {
+    background-color: #fff;
+    fill: #ff5e3a;
+    color: #515365;
+    border-bottom: transparent;
+}
+
+.ui-block .news-feed-form .nav-link {
+    fill: #888da8;
+    color: #888da8;
+}
+
+.ui-block .news-feed-form form {
+    position: relative;
+}
+
+.ui-block .news-feed-form .author-thumb {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.ui-block .author-thumb {
+    display: inline-block;
+    position: relative;
+}
+
+    .ui-block .author-thumb img {
+        border-radius: 100%;
+        overflow: hidden;
+        max-width: unset;
+        display: block;
+        width: 48px;
+        height: 48px;
+    }
+
+.ui-block img {
+    vertical-align: unset;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.ui-block .news-feed-form .form-group {
+    margin-bottom: 0;
+}
+
+.ui-block .form-group {
+    position: relative;
+    margin-bottom: 1.4rem;
+}
+
+.ui-block .add-options-message {
+    padding: 20px 25px;
+    float: left;
+    width: 100%;
+}
+
+.ui-block .label-floating.with-icon label.control-label, .label-placeholder.with-icon label.control-label {
+    left: 85px !important;
+}
+
+.ui-block .form-group.label-static label.control-label, .form-group.label-placeholder label.control-label, .form-group.label-floating label.control-label {
+    position: absolute;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.ui-block .form-group.label-floating label.control-label, .form-group.label-placeholder label.control-label {
+    top: 18px;
+    font-size: 14px;
+    line-height: 1.42857;
+    left: 20px;
+}
+
+.ui-block label.control-label {
+    color: #888da8;
+}
+
+.ui-block .label-floating.with-icon .form-control, .label-floating.with-icon input, .label-floating.with-icon textarea {
+    padding-left: 85px;
+    max-width: inherit;
+}
+
+.ui-block .form-group.label-floating textarea {
+    padding: 1.3rem 1.1rem .2rem;
+}
+
+.ui-block .label-floating textarea.form-control {
+    padding: 1.5rem 1.1rem .2rem;
+}
+
+.ui-block .label-floating .form-control, .label-floating input, .label-floating select {
+    padding: 1.5rem 1.1rem .5rem;
+    line-height: 1.75;
+}
+
+.ui-block .news-feed-form textarea {
+    min-height: 160px;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.ui-block .form-group textarea {
+    resize: none;
+}
+
+.ui-block input, .form-control {
+    color: #515365 !important;
+    line-height: inherit;
+    font-size: .875rem !important;
+}
+
+.ui-block select, input, .form-control {
+    background-color: transparent !important;
+}
+
+.ui-block .add-options-message {
+    padding: 20px 25px;
+    float: left;
+    width: 100%;
+}
+
+.ui-block .news-feed-form .options-message {
+    margin-top: 7px;
+}
+
+.ui-block .add-options-message .options-message {
+    color: #c2c5d9;
+    fill: #c2c5d9;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.ui-block a {
+    transition: all .15s ease;
+}
+
+.ui-block .news-feed-form .options-message i {
+    /*width: 22px;
+    height: 22px;*/
+    font-size: 1.2rem;
+}
+
+.ui-block .add-options-message .options-message i {
+    width: 24px;
+    height: 18px;
+}
+
+[class^="olymp-"], [class*=" -icon"] {
+    height: 26px;
+    width: 26px;
+    display: inline-block;
+}
+
+.ui-block a > i {
+    transition: all .15s ease;
+}
+
+.ui-block i {
+    transition: all .3s ease;
+    vertical-align: unset;
+}
+
+.ui-block .add-options-message .options-message {
+    color: #c2c5d9;
+    fill: #c2c5d9;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.ui-block .add-options-message button {
+    margin-bottom: 0;
+    float: right;
+}
+
+.ui-block button.btn-md-2 {
+    padding: .8rem 2.1rem;
+    font-size: 0.688rem;
+    border-radius: 0.3rem;
+}
+
+.ui-block button.btn {
+    padding: .5rem 1rem;
+}
+
+.ui-block .btn {
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+    .ui-block .btn.c-grey {
+        border-color: #d8dbe6;
+    }
+
+.ui-block .add-options-message button + button {
+    margin-right: 15px;
+}
+
+.ui-block .add-options-message button {
+    margin-bottom: 0;
+    float: right;
+}
+
+.ui-block button.btn-md-2 {
+    padding: .8rem 2.1rem;
+    font-size: 0.688rem;
+    border-radius: 0.3rem;
+}
+
+.ui-block button.btn {
+    padding: .5rem 1rem;
+}
+
+.ui-block .c-grey {
+    color: #888da8;
+}
+
+.ui-block .btn-border-think {
+    border: solid 1px;
+}
+
+.ui-block .btn-md-2 {
+    padding: .8rem 2.1rem;
+    font-size: 0.688rem;
+    border-radius: 0.3rem;
+}
+
+.ui-block .btn-transparent {
+    background-color: transparent;
+}
+
+.ui-block .btn {
+    color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.ui-block .news-feed-form .form-group.label-floating.is-focused .control-label, .news-feed-form .form-group.label-floating.has-bootstrap-select .control-label {
+    top: 16px;
+}
+
+.ui-block .form-group.label-static label.control-label, .form-group.label-floating.is-focused label.control-label, .form-group.label-floating:not(.is-empty) label.control-label, .form-group.has-bootstrap-select label.control-label {
+    top: 10px;
+    font-size: 11px;
+    line-height: 1.07143;
+}
+
+.ui-block .news-feed-form .form-group.with-icon::after {
+    display: none;
+}
+
+.ui-block .form-group.with-icon:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 1px;
+    background-color: #e6ecf5;
+    top: 0;
+    left: 50px;
+}
+
+.ui-block .nav-tabs i {
+    font-size: 1.2rem;
+}
+
+.ui-block .post {
+    position: relative;
+    padding: 25px;
+    border-bottom: 1px solid #e6ecf5;
+}
+
+.ui-block .post__author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 12px;
+}
+
+.ui-block .inline-items > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ui-block .post .author-date a {
+    font-weight: 700;
+}
+
+.ui-block .post .post__author-name {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.ui-block .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .post .h1, .post .h2, .post .h3, .post .h4, .post .h5, .post .h6 {
+    display: inline-block;
+}
+
+.ui-block .post__author .more {
+    float: right;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.ui-block .more {
+    position: relative;
+    transition: all .3s ease;
+    color: #888da8;
+    fill: #c0c4d8;
+}
+
+    .ui-block .more > i {
+        cursor: pointer;
+    }
+
+.ui-block .olymp-three-dots-icon {
+    width: 16px;
+    height: 4px;
+}
+
+.ui-block .more-dropdown {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 180px;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+    background-color: #fff;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+    text-align: left;
+    padding: 15px 20px;
+    z-index: 5;
+}
+
+.ui-block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ui-block .more-dropdown a {
+    padding: 7px 0;
+    font-size: 12px;
+    color: #515365;
+    display: block;
+    font-weight: 700;
+}
+
+.ui-block .post p {
+    margin: 25px 0;
+}
+
+.ui-block p {
+    font-size: .875rem;
+}
+
+.ui-block .post-additional-info {
+    padding: 20px 0 0;
+    border-top: 1px solid #e6ecf5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ui-block .post-add-icon {
+    fill: #c2c5d9;
+    color: #c2c5d9;
+}
+
+.ui-block .post-additional-info > * {
+    margin-right: 15px;
+}
+
+.ui-block .post-add-icon i, .post-add-icon img {
+    margin-right: 8px;
+    width: 20px;
+    height: 18px;
+}
+
+.ui-block .post-add-icon > * {
+    vertical-align: middle;
+    transition: all .15s ease;
+}
+
+.ui-block .friends-harmonic {
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+    .ui-block .friends-harmonic li {
+        float: left;
+    }
+
+        .ui-block .friends-harmonic li:first-child a {
+            margin-left: 0;
+        }
+
+    .ui-block .friends-harmonic a {
+        width: 28px;
+        height: 28px;
+        border-radius: 100%;
+        overflow: hidden;
+        border: 2px solid #fff;
+        display: block;
+        margin-left: -12px;
+    }
+
+.ui-block .names-people-likes {
+    font-size: 12px;
+}
+
+    .ui-block .names-people-likes a {
+        color: #515365;
+        font-weight: 700;
+    }
+
+.ui-block .post-additional-info > *:last-child {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.ui-block .comments-shared > * {
+    margin-right: 15px;
+}
+
+.ui-block .post-add-icon .olymp-speech-balloon-icon {
+    width: 22px;
+    height: 20px;
+}
+
+.ui-block .post-add-icon i, .post-add-icon img {
+    margin-right: 8px;
+    width: 20px;
+    height: 18px;
+}

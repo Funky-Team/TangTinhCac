@@ -4,5 +4,11 @@
     "inputFiles": [
       "Content/template/glyphicon.css"
     ]
+  },
+  {
+    "outputFileName": "Content/template/flaticon.min.css",
+    "inputFiles": [
+      "Content/template/flaticon.css"
+    ]
   }
 ]
