@@ -46,6 +46,39 @@ namespace TangTinhCac.App_Start
             builder.RegisterType<BraService>()
                      .As<IBraService>()
                      .InstancePerRequest();
+            builder.RegisterType<IdolForumPostService>()
+                    .As<IIdolForumPostService>()
+                    .InstancePerRequest();
+            builder.RegisterType<IdolForumPostCommentService>()
+                    .As<IIdolForumPostCommentService>()
+                    .InstancePerRequest();
+            builder.RegisterType<IdolForumPostCommentReactionService>()
+                 .As<IIdolForumPostCommentReactionService>()
+                 .InstancePerRequest();
+            builder.RegisterType<IdolForumPostCommentReplyService>()
+                   .As<IIdolForumPostCommentReplyService>()
+                   .InstancePerRequest();
+            builder.RegisterType<IdolForumPostCommentReplyReactionService>()
+                  .As<IIdolForumPostCommentReplyReactionService>()
+                  .InstancePerRequest();
+            builder.RegisterType<IdolImageService>()
+                  .As<IIdolImageService>()
+                  .InstancePerRequest();
+            builder.RegisterType<IdolStoryService>()
+                 .As<IIdolStoryService>()
+                 .InstancePerRequest();
+            builder.RegisterType<IdolVideoService>()
+              .As<IIdolVideoService>()
+              .InstancePerRequest();
+            builder.RegisterType<ReactionTypeService>()
+            .As<IReactionTypeService>()
+            .InstancePerRequest();
+            builder.RegisterType<IdolForumPostTypeService>()
+           .As<IIdolForumPostTypeService>()
+           .InstancePerRequest();
+            builder.RegisterType<IdolForumPostImageService>()
+         .As<IIdolForumPostImageService>()
+         .InstancePerRequest();
             //Set the dependency resolver to be Autofac.  
             Container = builder.Build();
 

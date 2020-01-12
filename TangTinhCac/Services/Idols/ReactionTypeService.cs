@@ -9,20 +9,20 @@ using TangTinhCac.Services.DBFactory;
 
 namespace TangTinhCac.Services.Idols
 {
-    public class BraService : IBraService
+    public class ReactionTypeService : IReactionTypeService
     {
         private readonly ApplicationDbContext _db;
-        public BraService(IDBFactory dBFactoryService)
+        public ReactionTypeService(IDBFactory dBFactoryService)
         {
             _db = dBFactoryService.Init();
         }
-        public bool CreateNewBra(BraViewModel model, string userId)
+        public bool CreateNewReactionType(ReactionTypeViewModel model, string userId) 
         {
             try
             {
-                _db.Bras.Add(new Bra
+                _db.ReactionTypes.Add(new ReactionType
                 {
-                    BraDesc = model.BraDesc,
+                    ReactionTypeDesc = model.ReactionTypeDesc,
                     CreatedByID = userId,
                     CreatedDateTime = DateTime.Now
                 });
@@ -31,16 +31,15 @@ namespace TangTinhCac.Services.Idols
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
 
-        public bool DeleteBra(int BraID)
+        public bool DeleteReactionTypeID(int reactionTypeID)
         {
             try
             {
-                _db.Bras.Remove(GetBraByBraID(BraID));
+                _db.ReactionTypes.Remove(GetReactionTypeByReactionTypeID(reactionTypeID));
                 _db.SaveChanges();
                 return true;
             }
@@ -51,11 +50,11 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public IEnumerable<Bra> GetAllBra()
+        public IEnumerable<ReactionType> GetAllReactionTypes()
         {
             try
             {
-                return _db.Bras.ToList();
+                return _db.ReactionTypes.ToList();
             }
             catch (Exception ex)
             {
@@ -64,11 +63,11 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public Bra GetBraByBraID(int BraID)
+        public ReactionType GetReactionTypeByReactionTypeID(int reactionTypeID)
         {
             try
             {
-                return _db.Bras.Find(BraID) ?? new Bra();
+                return _db.ReactionTypes.Find(reactionTypeID);
             }
             catch (Exception ex)
             {
@@ -77,14 +76,14 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public bool UpdateBra(BraViewModel model, string userId)
+        public bool UpdateReactionTypeID(ReactionTypeViewModel model, string userId)
         {
             try
             {
-                var bra = GetBraByBraID(model.BraID);
-                bra.BraDesc = model.BraDesc;
-                bra.LastModifiedByID = userId;
-                bra.LastModifiedDateTime = DateTime.Now;
+                var reactionType = GetReactionTypeByReactionTypeID(model.ReactionTypeID);
+                reactionType.ReactionTypeDesc = model.ReactionTypeDesc;
+                reactionType.LastModifiedByID = userId;
+                reactionType.LastModifiedDateTime = DateTime.Now;
                 _db.SaveChanges();
                 return true;
             }

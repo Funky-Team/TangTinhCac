@@ -9,22 +9,26 @@ using TangTinhCac.Services.DBFactory;
 
 namespace TangTinhCac.Services.Idols
 {
-    public class BraService : IBraService
+    public class IdolVideoService : IIdolVideoService
     {
         private readonly ApplicationDbContext _db;
-        public BraService(IDBFactory dBFactoryService)
+
+        public IdolVideoService(IDBFactory dbFactoryService)
         {
-            _db = dBFactoryService.Init();
+            _db = dbFactoryService.Init();
         }
-        public bool CreateNewBra(BraViewModel model, string userId)
+        public bool CreateNewIdolVideo(IdolVideoViewModel model, string userId)
         {
             try
             {
-                _db.Bras.Add(new Bra
+                _db.IdolVideos.Add(new IdolVideo
                 {
-                    BraDesc = model.BraDesc,
+                    VideoTitle = model.VideoTitle,
+                    VideoDesc = model.VideoDesc,
+                    VideoLink = model.VideoLink,
+                    IdolID = model.IdolID,
                     CreatedByID = userId,
-                    CreatedDateTime = DateTime.Now
+                    CreatedDateTime = DateTime.Now,
                 });
                 _db.SaveChanges();
                 return true;
@@ -36,26 +40,25 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public bool DeleteBra(int BraID)
+        public bool DeleteIdolVideo(int videoID)
         {
             try
             {
-                _db.Bras.Remove(GetBraByBraID(BraID));
+                _db.IdolVideos.Remove(GetIdolVideoByVideoID(videoID));
                 _db.SaveChanges();
                 return true;
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
 
-        public IEnumerable<Bra> GetAllBra()
+        public IEnumerable<IdolVideo> GetAllIdolVideos()
         {
             try
             {
-                return _db.Bras.ToList();
+                return _db.IdolVideos.ToList();
             }
             catch (Exception ex)
             {
@@ -64,11 +67,11 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public Bra GetBraByBraID(int BraID)
+        public IdolVideo GetIdolVideoByVideoID(int videoID)
         {
             try
             {
-                return _db.Bras.Find(BraID) ?? new Bra();
+                return _db.IdolVideos.Find(videoID);
             }
             catch (Exception ex)
             {
@@ -77,14 +80,17 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public bool UpdateBra(BraViewModel model, string userId)
+        public bool UpdateIdolVideo(IdolVideoViewModel model, string userId)
         {
             try
             {
-                var bra = GetBraByBraID(model.BraID);
-                bra.BraDesc = model.BraDesc;
-                bra.LastModifiedByID = userId;
-                bra.LastModifiedDateTime = DateTime.Now;
+                var idolVideo = GetIdolVideoByVideoID(model.VideoID);
+                idolVideo.VideoTitle = model.VideoTitle;
+                idolVideo.VideoDesc = model.VideoDesc;
+                idolVideo.VideoLink = model.VideoLink;
+                idolVideo.IdolID = model.IdolID;
+                idolVideo.LastModifiedDateTime = DateTime.Now;
+                idolVideo.LastModifiedByID = userId;
                 _db.SaveChanges();
                 return true;
             }
