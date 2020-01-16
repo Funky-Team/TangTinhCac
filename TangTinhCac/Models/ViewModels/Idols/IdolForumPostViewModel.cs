@@ -16,7 +16,7 @@ namespace TangTinhCac.Models.ViewModels.Idols
         [StringLength(100)]
         public string PostContent { get; set; }
         [Required]
-        public int PostTypeID { get; set; }
+        public string PostTypeCD { get; set; } 
         [Required]
         [ForeignKey("Idol")]
         public Guid IdolID { get; set; }

@@ -23,7 +23,7 @@ namespace TangTinhCac.Services.Idols
                 _db.IdolForumPosts.Add(new IdolForumPost
                 {
                     PostContent = model.PostContent,
-                    PostTypeID = model.PostTypeID,
+                    PostTypeCD = model.PostTypeCD,
                     IdolID = model.IdolID,
                     CreatedByID = userId,
                     CreatedDateTime = DateTime.Now,
@@ -85,7 +85,7 @@ namespace TangTinhCac.Services.Idols
             {
                 var post = GetIdolForumPostByPostID(model.PostID);
                 post.PostContent = model.PostContent;
-                post.PostTypeID = model.PostTypeID;
+                post.PostTypeCD = model.PostTypeCD;
                 post.IdolID = model.IdolID;
                 post.LastModifiedByID = userId;
                 post.LastModifiedDateTime = DateTime.Now;

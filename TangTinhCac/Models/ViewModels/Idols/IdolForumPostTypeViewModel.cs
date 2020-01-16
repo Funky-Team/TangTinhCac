@@ -9,9 +9,12 @@ namespace TangTinhCac.Models.ViewModels.Idols
 {
     public class IdolForumPostTypeViewModel
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int PostTypeID { get; set; }
+        //[Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //public int PostTypeID { get; set; }
+        [Required]
+        [StringLength(3)]
+        public string PostTypeCD { get; set; }
         [Required]
         public string PostTypeDesc { get; set; }
         [MaxLength(128)]

@@ -36,13 +36,13 @@ namespace TangTinhCac.Controllers.WebApi
             return Request.CreateResponse(HttpStatusCode.OK, listBra);
         }
         [HttpGet]
-        public HttpResponseMessage GetIdolForumPostTypeByPostTypeID(int id)
+        public HttpResponseMessage GetIdolForumPostTypeByPostTypeID(string id)
         {
             var bra = _idolForumPostTypeService.GetIdolForumPostTypeByPostTypeID(id);
             return Request.CreateResponse(HttpStatusCode.OK, bra);
         }
         [HttpDelete]
-        public HttpResponseMessage DeleteIdolForumPostType(int id)
+        public HttpResponseMessage DeleteIdolForumPostType(string id)
         {
             var success = _idolForumPostTypeService.DeleteIdolForumPostType(id);
             return Request.CreateResponse(HttpStatusCode.OK, success);

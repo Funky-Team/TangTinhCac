@@ -11,9 +11,9 @@ namespace TangTinhCac.Services.Idols
     public interface IIdolForumPostTypeService
     {
         IEnumerable<IdolForumPostType> GetAllIdolForumPostType();
-        IdolForumPostType GetIdolForumPostTypeByPostTypeID(int PostTypeID);
+        IdolForumPostType GetIdolForumPostTypeByPostTypeID(string PostTypeCD);
         bool CreateNewIdolForumPostType(IdolForumPostTypeViewModel model, string userId);
         bool UpdateIdolForumPostType(IdolForumPostTypeViewModel model, string userId);
-        bool DeleteIdolForumPostType(int PostTypeID);
+        bool DeleteIdolForumPostType(string PostTypeCD); 
     }
 }

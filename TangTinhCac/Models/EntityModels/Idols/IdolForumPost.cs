@@ -17,7 +17,9 @@ namespace TangTinhCac.Models.EntityModels.Idols
         [StringLength(100)]
         public string PostContent { get; set; }
         [Required]
-        public int PostTypeID { get; set; }
+        [StringLength(3)]
+        [ForeignKey("IdolForumPostType"), Column(Order = 1)]
+        public string PostTypeCD { get; set; }
         [Required]
         [ForeignKey("Idol")]
         public Guid IdolID { get; set; }

@@ -37,11 +37,11 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public bool DeleteIdolForumPostType(int PostTypeID)
+        public bool DeleteIdolForumPostType(string PostTypeCD)
         {
             try
             {
-                _db.IdolForumPostTypes.Remove(GetIdolForumPostTypeByPostTypeID(PostTypeID));
+                _db.IdolForumPostTypes.Remove(GetIdolForumPostTypeByPostTypeID(PostTypeCD));
                 _db.SaveChanges();
                 return true;
             }
@@ -65,11 +65,11 @@ namespace TangTinhCac.Services.Idols
             }
         }
 
-        public IdolForumPostType GetIdolForumPostTypeByPostTypeID(int PostTypeID)
+        public IdolForumPostType GetIdolForumPostTypeByPostTypeID(string PostTypeCD)
         {
             try
             {
-                return _db.IdolForumPostTypes.Find(PostTypeID) ?? new IdolForumPostType();
+                return _db.IdolForumPostTypes.Find(PostTypeCD) ?? new IdolForumPostType();
             }
             catch (Exception ex)
             {
@@ -82,7 +82,7 @@ namespace TangTinhCac.Services.Idols
         {
             try
             {
-                var postType = GetIdolForumPostTypeByPostTypeID(model.PostTypeID);
+                var postType = GetIdolForumPostTypeByPostTypeID(model.PostTypeCD);
                 postType.PostTypeDesc = model.PostTypeDesc;
                 postType.LastModifiedByID = userId;
                 postType.LastModifiedDateTime = DateTime.Now;

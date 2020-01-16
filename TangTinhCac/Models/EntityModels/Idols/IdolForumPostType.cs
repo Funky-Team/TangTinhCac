@@ -10,9 +10,12 @@ namespace TangTinhCac.Models.EntityModels.Idols
     [Table("IdolForumPostType")]
     public class IdolForumPostType
     {
+        //[Key, Column(Order = 0)]
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //public int PostTypeID { get; set; }
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int PostTypeID { get; set; }
+        [StringLength(3)]
+        public string PostTypeCD { get; set; }
         [Required]
         public string PostTypeDesc { get; set; }
         [MaxLength(128)]
