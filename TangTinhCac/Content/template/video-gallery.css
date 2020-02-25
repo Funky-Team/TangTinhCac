@@ -10,7 +10,7 @@
 .box {
   position: relative;
   height: auto;
-  line-height: 150px;
+  line-height: initial;
   overflow: hidden;
   background-position: center center !important;
   background-size: cover !important;
@@ -87,7 +87,8 @@
       /*width: 33%;*/
       height: auto;
       float: left;
-      padding: 5px;
+      /*padding: 5px;*/
+      padding-bottom: 20px;
       position: initial;
       z-index: 4;
       /*background: $body-bg;*/ }
@@ -227,4 +228,4 @@
 #idol_videos .glyphicon-play-circle {
   color: #ffffff;
   font-size: 3rem;
-  top: 35%; }
+  top: 50%; }
